@@ -1,0 +1,103 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #d32f2f;
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  margin-bottom: 20px;
+}
+.navbar h1 { margin: 0; }
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar ul li { margin-left: 20px; }
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+ .navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Underline the active nav link */
+.navbar ul li .active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  color: white; /* Optional: highlight active link color */
+  font-weight: 600;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 15px;
+  border: 1px;
+}
+.search-bar input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  border-radius: 15px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.search-bar input::placeholder {
+  color: #aaa;
+}
+.search-bar button {
+  padding: 10px 10px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-left: 1px solid #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.search-bar button:hover {
+  background-color: #005fa3;
+  transform: scale(1.1);
+}
+
+.search-bar input:hover {
+  border-color: #0077cc;
+  transform: scale(1.05);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.navbar-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.navbar-brand span {
+  font-size: 2rem;           /* Adjust as needed to match logo height */
+  font-weight: 600;          /* Semi-bold */
+  color: #fcfafa;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
