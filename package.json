@@ -2,7 +2,7 @@
   "name": "e-commerce",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Osaeoekaa.github.io/E-commerce-website",
+  "homepage": "https://osaroekaa.github.io/E-commerce-website",
   "dependencies": {
     "cra-template": "1.3.0",
     "react": "^18.3.1",
