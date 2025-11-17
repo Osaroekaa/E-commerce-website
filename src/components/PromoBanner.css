@@ -1,0 +1,53 @@
+.promo-banner {
+  width: 1270px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* lower than navbar */
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px ;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.promo-banner {
+  position: relative; /* or absolute if needed */
+ 
+  background-size: cover;
+  background-position: center;
+  
+}
+/* Hide the promo image element, since we'll use it as a background */
+.promo-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-item img {
+  display: none;
+}
+
+.promo-text {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 15px 25px;
+  border-radius: 5px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
