@@ -61,6 +61,8 @@ function AdminPanel() {
     setEditingIndex(index);
   };
 
+  const isFormValid = form.name && form.price && form.quantity && form.category && form.image;
+
   return (
     <div className="admin-container">
       <h2>Admin Panel</h2>
@@ -98,7 +100,7 @@ function AdminPanel() {
         </div>
         <input type="file" id="imageInput" accept="image/*" style={{ display: "none" }} onChange={handleImageUpload} />
 
-        <button type="submit">{editingIndex !== null ? "Update Product" : "Add Product"}</button>
+        <button type="submit" disabled={!isFormValid}>{editingIndex !== null ? "Update Product" : "Add Product"}</button>
       </form>
 
       <h3>Products</h3>
