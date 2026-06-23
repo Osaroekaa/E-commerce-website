@@ -116,7 +116,7 @@ function Home() {
           ].map(item => (
             <div key={item.id} className="service-item" onClick={() => goToProduct(item.id)}>
               <img
-                src={`/images/${item.img}`}
+                src={`${process.env.PUBLIC_URL}/images/${item.img}`}
                 alt={item.alt}
                 onMouseEnter={handleMouseEnter}
                 onMouseMove={handleMouseMove}

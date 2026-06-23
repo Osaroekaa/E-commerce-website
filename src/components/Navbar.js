@@ -10,7 +10,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-brand">
         <img
-          src="/images/Logo.jpg"
+          src={`${process.env.PUBLIC_URL}/images/Logo.jpg`}
           alt="Market Square Logo"
           className="navbar-logo"
         />
