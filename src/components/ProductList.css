@@ -3,13 +3,12 @@
   padding: 30px;
 }
 .product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: 20px;
 }
 .product-card {
-  width: 200px;
+  min-width: 0;
   background: #fff;
   padding: 15px;
   border-radius: 6px;
@@ -103,6 +102,10 @@
 }
 
 @media (max-width: 768px) {
+  .product-list {
+    padding: 20px 16px;
+  }
+
   .product-grid {
     gap: 10px;
   }

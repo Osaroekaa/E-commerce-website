@@ -1,5 +1,6 @@
 .promo-banner {
-  width: 1270px;
+  width: 100%;
+  max-width: 1270px;
   height: 200px;
   background-size: cover;
   background-position: center;
@@ -10,7 +11,7 @@
   z-index: 1; /* lower than navbar */
   border-radius: 8px;
   overflow: hidden;
-  padding: 20px ;
+  padding: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -45,6 +46,18 @@
   border-radius: 5px;
   text-align: center;
   animation: fadeIn 1s ease;
+}
+
+@media (max-width: 600px) {
+  .promo-banner {
+    height: 160px;
+    padding: 12px;
+  }
+
+  .promo-text {
+    font-size: 17px;
+    padding: 12px 16px;
+  }
 }
 
 @keyframes fadeIn {
