@@ -4,135 +4,115 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 12px 24px;
-  background-color: #d32f2f;
+  background: #bd252b;
   color: white;
-  padding: 15px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 12px clamp(16px, 4vw, 48px);
   position: sticky;
   top: 0;
-  left: 0;
   width: 100%;
   z-index: 10;
-}
-.navbar h1 { margin: 0; }
-.navbar ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.navbar ul li { margin: 0; }
-.navbar ul li a {
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
- .navbar ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Underline the active nav link */
-.navbar ul li .active {
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  color: white; /* Optional: highlight active link color */
-  font-weight: 600;
-}
-
-.search-bar {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  border-radius: 15px;
-  border: 1px;
-}
-.search-bar input {
-  flex: 1;
-  padding: 8px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: #333;
-  border-radius: 15px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-.search-bar input::placeholder {
-  color: #aaa;
-}
-.search-bar button {
-  padding: 10px 10px;
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  border-left: 1px solid #ccc;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-.search-bar button:hover {
-  background-color: #005fa3;
-  transform: scale(1.1);
-}
-
-.search-bar input:hover {
-  border-color: #0077cc;
-  transform: scale(1.05);
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
   gap: 10px;
-  
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 .navbar-logo {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   object-fit: contain;
-  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  background: #fff;
 }
 
 .navbar-brand span {
-  font-size: 2rem;           /* Adjust as needed to match logo height */
-  font-weight: 600;          /* Semi-bold */
-  color: #fcfafa;
-  display: flex;
-  align-items: center;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
   line-height: 1;
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0;
+}
+
+.navbar ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  border: 0;
+  box-shadow: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 10px 13px;
+  border-radius: 6px;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus-visible {
+  background: rgba(255, 255, 255, 0.14);
+  outline: none;
+  text-decoration: none;
+}
+
+.navbar ul li .active {
+  background: rgba(255, 255, 255, 0.18);
+  font-weight: 700;
+  text-decoration: none;
+  border: 0;
+  box-shadow: none;
 }
 
 @media (max-width: 700px) {
   .navbar {
     justify-content: center;
+    gap: 8px 16px;
     padding: 12px 16px;
-  }
-
-  .navbar-brand span {
-    font-size: 1.6rem;
   }
 
   .navbar ul {
     width: 100%;
-    gap: 8px 16px;
+    gap: 4px 8px;
   }
 }
 
 @media (max-width: 400px) {
   .navbar {
-    padding: 10px 12px;
+    padding: 10px 8px;
+  }
+
+  .navbar-logo {
+    width: 34px;
+    height: 34px;
   }
 
   .navbar-brand span {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
   }
 
   .navbar ul {
-    column-gap: 12px;
-    font-size: 0.9rem;
+    column-gap: 4px;
+  }
+
+  .navbar ul li a {
+    padding: 7px 6px;
+    font-size: 0.85rem;
   }
 }
